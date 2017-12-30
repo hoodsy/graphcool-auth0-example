@@ -1,0 +1,5 @@
+service: graphcool-auth0-example
+
+datamodel: database/datamodel.graphql
+
+secret: mysecret123

@@ -1,0 +1,20 @@
+# import User from "../database/schema.generated.graphql"
+
+type Query {
+  me: User
+}
+
+type Mutation {
+  signup(accessToken: String!): AuthPayload!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+type User {
+  id: ID!
+  email: String!
+  name: String!
+}

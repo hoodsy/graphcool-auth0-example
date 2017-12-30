@@ -1,0 +1,26 @@
+{
+  "name": "graphcool-auth0-example",
+  "scripts": {
+    "start": "dotenv -- nodemon server/index.js",
+    "playground": "graphql playground",
+    "deploy": "now --public --dotenv .env.prod && now alias && now rm --yes --safe graphcool-auth0-example",
+    "now-start": "node server/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "graphcool-binding": "0.4.0",
+    "graphql-import": "0.1.9",
+    "graphql-yoga": "0.7.0",
+    "jsonwebtoken": "8.1.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "1.4.0",
+    "graphql-cli": "2.2.2",
+    "nodemon": "1.14.6",
+    "now": "9.0.1",
+    "rimraf": "2.6.2"
+  },
+  "now": {
+    "alias": "graphcool-auth0-example"
+  }
+}
