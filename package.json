@@ -11,7 +11,6 @@
     "express-jwt": "^5.3.0",
     "express-jwt-authz": "^1.0.0",
     "graphcool-binding": "0.4.0",
-    "graphql-import": "0.1.9",
     "graphql-yoga": "0.7.0",
     "jsonwebtoken": "8.1.0",
     "jwks-rsa": "^1.2.1",
