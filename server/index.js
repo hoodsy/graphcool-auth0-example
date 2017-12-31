@@ -1,5 +1,4 @@
 const { GraphQLServer } = require('graphql-yoga')
-const { importSchema } = require('graphql-import')
 const { Graphcool } = require('graphcool-binding')
 const jwt = require('express-jwt')
 const jwtAuthz = require('express-jwt-authz')
@@ -7,10 +6,8 @@ const jwks = require('jwks-rsa')
 
 const resolvers = require('./resolvers')
 
-const typeDefs = importSchema('./server/schema.graphql')
-
 const server = new GraphQLServer({
-  typeDefs,
+  typeDefs: './server/schema.graphql',
   resolvers,
   context: req => ({
     ...req,
