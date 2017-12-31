@@ -65,14 +65,14 @@ type PageInfo {
 
 type PostConnection {
   pageInfo: PageInfo!
-  edges: [PostEdge!]
+  edges: [PostEdge]!
 }
 
 input PostCreateInput {
   isPublished: Boolean!
   title: String!
   text: String!
-  author: UserCreateOneWithoutPostsInput
+  author: UserCreateOneWithoutPostsInput!
 }
 
 input PostCreateManyWithoutAuthorInput {
@@ -221,7 +221,7 @@ type Query {
 
 type UserConnection {
   pageInfo: PageInfo!
-  edges: [UserEdge!]
+  edges: [UserEdge]!
 }
 
 input UserCreateInput {

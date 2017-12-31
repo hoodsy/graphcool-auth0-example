@@ -1,6 +1,6 @@
 # To Do
 ### login:
-- [ ] authenticate with Auth0, get JWT
+- [x] authenticate with Auth0, get JWT
 - [ ] `me` query (with JWT as `Authorization` header)
 - [ ] validate JWT
 - [ ] return user specific data (like `id`, `name`, etc) (edited)
