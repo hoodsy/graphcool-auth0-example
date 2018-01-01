@@ -2,14 +2,14 @@
 ### login:
 - [x] authenticate with Auth0, get JWT
 - [ ] `me` query (with JWT as `Authorization` header)
-- [ ] validate JWT
+- [x] validate JWT
 - [ ] return user specific data (like `id`, `name`, etc) (edited)
 
 ### signup:
-- [ ] authenticate with Auth0, get JWT
-- [ ] signup mutation (with JWT and any app-specific data)
+- [x] authenticate with Auth0, get JWT
+- [x] signup mutation (with JWT and any app-specific data)
 - [ ] validate JWT and user data (e.g. user already exists, etc)
-- [ ] create new user
+- [x] create new user
 - [ ] Auth0 JWT used for authorization
 
 ### auth0
