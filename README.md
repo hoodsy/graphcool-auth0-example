@@ -12,6 +12,9 @@
 - [ ] create new user
 - [ ] Auth0 JWT used for authorization
 
+### auth0
+- [ ] generate `access_token` for API
+
 # node-advanced
 
 🚀 Advanced starter code for a scalable, production-ready GraphQL server for Node.js, including authentication and realtime functionality with GraphQL subscriptions.

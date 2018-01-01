@@ -1,4 +1,4 @@
-service: graphcool-auth0-example
+service: graphcool-auth0-example-new
 
 datamodel: database/datamodel.graphql
 

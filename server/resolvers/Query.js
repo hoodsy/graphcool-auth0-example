@@ -1,12 +1,10 @@
-const { getUserId, Context } = require('../utils')
+const { getUserId } = require('../modules/auth')
 
 const Query = {
-  me(parent, args, ctx, info) {
-    console.log('ME QUERY')
-    console.log('headers: ', ctx.headers)
-    return 'ME RETURN VALUE'
-    // const id = getUserId(ctx)
-    // return ctx.db.query.user({ where: { id } }, info)
+  async me(parent, args, ctx, info) {
+    const userId = await getUserId(ctx)
+    // console.log(userId)
+    return ctx.db.query.user({ where: { userId } }, info)
   },
 }
 
