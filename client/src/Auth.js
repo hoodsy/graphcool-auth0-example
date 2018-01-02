@@ -20,14 +20,15 @@ class Auth extends React.Component {
   signup = async (e) => {
     e.preventDefault()
     const user = this.getFormData()
+    console.log(user)
     try {
-      const res = await this.props.signupMutation({
+      const { data } = await this.props.signupMutation({
         variables: {
           input: user
         }
       })
-
-      console.log(res)
+      console.log(data)
+      localStorage.setItem('token', data.signup.token)
 
     } catch (e) {
       console.error(e)
@@ -35,6 +36,7 @@ class Auth extends React.Component {
   }
 
   render() {
+    console.log(this.props.meQuery)
     return (
       <div>
         <h1>Auth</h1>

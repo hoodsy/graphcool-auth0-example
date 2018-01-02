@@ -1,11 +1,21 @@
 const jwt = require('jsonwebtoken')
 
 const users = require('models/users')
+const AuthError = require('errors/AuthError')
 
 const auth = {
   async signup(parent, { input }, ctx, info) {
+    console.log(input)
+    let user = await users.getByEmail(ctx, input.email)
+
+    if (user) {
+      throw new AuthError({
+        message: 'A user with that email already exists'
+      })
+    }
+
     const auth0User = await users.createAuth0(input)
-    const user = await users.create(ctx, {
+    user = await users.create(ctx, {
       ...input,
       auth0Id: auth0User._id
     })
@@ -15,6 +25,29 @@ const auth = {
       user,
     }
   },
+
+  // async login(parent, { input }, ctx, info) {
+  //   let user = await users.getByEmail(ctx, input.email)
+  //
+  //   if (!user) {
+  //     throw new AuthError({
+  //       message: 'No user with that email exists'
+  //     })
+  //   }
+  //
+  //   const userData = await users.getAuth0Token(input)
+  //   if (userData.err) {
+  //     throw new AuthError({
+  //       message: 'Invalid password or email combination'
+  //     })
+  //   }
+  //   console.log(userData)
+  //
+  //   return {
+  //     user,
+  //     token: userData.token
+  //   }
+  // }
 }
 
 module.exports = auth

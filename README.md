@@ -1,20 +1,24 @@
 # To Do
 ### login:
-- [x] authenticate with Auth0, get JWT
-- [ ] `me` query (with JWT as `Authorization` header)
+- [ ] authenticate with Auth0, get JWT
+- [x] `me` query (with JWT as `Authorization` header)
 - [x] validate JWT
-- [ ] return user specific data (like `id`, `name`, etc) (edited)
+- [x] return user specific data (like `id`, `name`, etc)
 
 ### signup:
 - [x] authenticate with Auth0, get JWT
 - [x] signup mutation (with JWT and any app-specific data)
-- [ ] validate JWT and user data (e.g. user already exists, etc)
+- [x] validate JWT and user data (e.g. user already exists, etc)
 - [x] create new user
-- [ ] Auth0 JWT used for authorization
+- [x] Auth0 JWT used for authorization
+
+### Facebook login
+- [x] authenticate with Auth0, get JWT
+- [ ] create new user / login
+- [ ] JWT used for authorization
 
 ### auth0
-- [ ] generate `access_token` for API
-
+- [ ] RS256 example
 
 #### .env
 `NODE_PATH="server"`
