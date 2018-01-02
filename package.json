@@ -7,11 +7,14 @@
     "now-start": "node server/index.js"
   },
   "dependencies": {
+    "apollo-errors": "^1.5.1",
+    "auth0": "^2.9.1",
     "bcryptjs": "2.4.3",
     "express-jwt": "^5.3.0",
     "express-jwt-authz": "^1.0.0",
     "graphcool-binding": "0.4.0",
     "graphql-yoga": "0.7.0",
+    "isomorphic-fetch": "^2.2.1",
     "jsonwebtoken": "8.1.0",
     "jwks-rsa": "^1.2.1",
     "middleware": "^1.0.0"

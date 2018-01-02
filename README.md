@@ -15,6 +15,10 @@
 ### auth0
 - [ ] generate `access_token` for API
 
+
+#### .env
+`NODE_PATH="server"`
+
 # node-advanced
 
 🚀 Advanced starter code for a scalable, production-ready GraphQL server for Node.js, including authentication and realtime functionality with GraphQL subscriptions.
