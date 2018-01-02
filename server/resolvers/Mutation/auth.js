@@ -4,7 +4,6 @@ const users = require('models/users')
 
 const auth = {
   async signup(parent, { input }, ctx, info) {
-
     const auth0User = await users.createAuth0(input)
     const user = await users.create(ctx, {
       ...input,
