@@ -6,12 +6,13 @@ type Query {
 
 type Mutation {
   signup(input: AuthInput!): AuthPayload!
+  login(input: AuthInput!): AuthPayload!
 }
 
 input AuthInput {
   email: String!
   password: String
-  name: String!
+  name: String
 }
 
 type AuthPayload {
